@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: white;
+    color: black;
+}
+
+/* Navbar */
+.navbar {
+    background: black;
+    color: white;
+    height: 55px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.github-section {
+    padding: 15px 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.github-section a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.github-section img {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.github-section a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Profile */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 25px 30px;
+}
+
+.profile img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile h2 {
+    margin: 0 0 8px;
+}
+
+.profile p {
+    margin: 0;
+    color: #555;
+}
+
+/* Project */
+.project {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px 30px;
+}
+
+.image {
+    width: calc(50% - 10px);
+}
+
+.image a {
+    display: block;
+}
+
+.image img,
+.image video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.code {
+    width: calc(50% - 10px);
+    height: 640px;
+    background: black;
+    color: white;
+    overflow: auto;
+}
+
+.code-title {
+    padding: 12px 15px;
+    background: #222;
+    border-bottom: 1px solid #444;
+    font-size: 14px;
+}
+
+.code pre {
+    padding: 15px;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Details */
+.details {
+    padding: 20px 30px 40px;
+    line-height: 1.7;
+}
+
+.details h2 {
+    font-size: 23px;
+    margin-top: 25px;
+}
+
+.details h3 {
+    font-size: 18px;
+}
+
+.details p,
+.details li {
+    font-size: 15px;
+}
+
+.tools span {
+    display: inline-block;
+    border: 1px solid #999;
+    padding: 5px 12px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.github-link {
+    color: #0645ad;
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        padding: 15px;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .navbar a {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+
+    .github-section {
+        padding: 15px;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .github-section a {
+        font-size: 13px;
+    }
+
+    .profile {
+        padding: 20px 15px;
+    }
+
+    .project {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .image,
+    .code {
+        width: 100%;
+    }
+
+    .details {
+        padding: 15px;
+    }
+}

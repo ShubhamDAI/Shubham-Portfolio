@@ -1,0 +1,315 @@
+<html>
+<head>
+<title>My Project</title>
+<link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="logo">Software Engineering | Project-3</div>
+
+    <div>
+        <a href="projects.html">Home</a>
+        <a href="#project">Detail</a>
+    </div>
+</div>
+
+<div class="github-section">
+
+    <a href="https://shubhamdai.github.io/Registeration-Form---HTML-and-CSS/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" alt="Website">
+        Live at web
+    </a>
+
+    <a href="https://github.com/ShubhamDAI/Registeration-Form---HTML-and-CSS.git" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/256/25/25231.png" alt="GitHub">
+        See, Edit, Download Code on GitHub
+    </a>
+
+</div>
+
+<div class="project" id="project">
+
+    <div class="image">
+        <a href="images/CSSFORM.png" target="_blank">
+            <img src="images/CSSFORM.png" alt="Student Registration Form">
+        </a>
+    </div>
+
+    <div class="code">
+
+        <div class="code-title">HTML and CSS Code</div>
+
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Registration Form&lt;/title&gt;
+
+&lt;style&gt;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background-image:url("https://i0.wp.com/picjumbo.com/wp-content/uploads/calming-nature-wallpaper-free-image.jpeg?w=600&amp;quality=80");
+background-size:cover;
+background-repeat:no-repeat;
+background-position:center;
+
+min-height:100vh;
+padding-top:80px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+
+background:rgba(0,0,0,0.7);
+color:white;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:15px 40px;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:20px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+}
+
+nav ul li a:hover{
+color:yellow;
+}
+
+.container{
+width:80%;
+max-width:900px;
+
+display:flex;
+justify-content:space-between;
+
+background:rgba(255,255,255,0.8);
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px black;
+}
+
+.form-box,
+.img-box{
+width:48%;
+}
+
+.form-box h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+label{
+display:block;
+margin-bottom:5px;
+font-weight:bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+
+width:100%;
+padding:10px;
+margin-bottom:15px;
+
+border:1px solid black;
+border-radius:5px;
+}
+
+.btn-group{
+display:flex;
+gap:10px;
+}
+
+.btn{
+width:50%;
+padding:10px;
+border:none;
+color:white;
+font-size:16px;
+font-weight:bold;
+border-radius:5px;
+cursor:pointer;
+}
+
+.submit-btn{
+background:blue;
+}
+
+.reset-btn{
+background:red;
+}
+
+.btn:hover{
+opacity:0.8;
+}
+
+.img-box img{
+width:100%;
+height:100%;
+border-radius:10px;
+}
+
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;nav&gt;
+
+&lt;div class="logo"&gt;My Logo&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;Our Services&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/nav&gt;
+
+&lt;div class="container"&gt;
+
+&lt;div class="form-box"&gt;
+
+&lt;h2&gt;REGISTRATION FORM&lt;/h2&gt;
+
+&lt;form action="#" method="post" autocomplete="on"&gt;
+
+&lt;label for="fullname"&gt;Full Name&lt;/label&gt;
+
+&lt;input
+id="fullname"
+name="fullname"
+type="text"
+placeholder="Enter Your Full Name"
+required&gt;
+
+&lt;label for="email"&gt;Email&lt;/label&gt;
+
+&lt;input
+id="email"
+name="email"
+type="email"
+placeholder="Enter Your Email"
+required
+pattern="[^ @]+@[^ @]+\.[a-zA-Z]{2,}"
+title="Please enter a valid email"&gt;
+
+&lt;label for="password"&gt;Password&lt;/label&gt;
+
+&lt;input
+id="password"
+name="password"
+type="password"
+placeholder="Create Password"
+required&gt;
+
+&lt;div class="btn-group"&gt;
+&lt;input type="submit" value="Submit" class="btn submit-btn"&gt;
+&lt;input type="reset" value="Reset" class="btn reset-btn"&gt;
+&lt;/div&gt;
+
+&lt;/form&gt;
+
+&lt;/div&gt;
+
+&lt;div class="img-box"&gt;
+&lt;img
+src="https://cdn.pixabay.com/photo/2021/12/12/20/00/play-6865967_1280.jpg"
+alt="Summer Image"&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    </div>
+
+</div>
+
+<div class="details">
+
+    <h2>About the Project</h2>
+
+    <p>
+        This project demonstrates a Student Registration Form created using HTML and CSS.
+        It provides a simple registration interface where users can enter their
+        full name, email address and password. The form includes Submit and Reset
+        buttons to handle user input. It also features a navigation bar, a background
+        image and a side image to make the registration page visually attractive.
+    </p>
+
+    <h2>Tools Used</h2>
+
+    <div class="tools">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>HTML Forms</span>
+        <span>Input Elements</span>
+        <span>CSS Flexbox</span>
+    </div>
+
+    <h2>Features</h2>
+
+    <ul>
+        <li>Navigation bar with Home, About Us, Contact and Our Services links.</li>
+        <li>Registration form with Full Name, Email and Password fields.</li>
+        <li>Email validation using the HTML pattern attribute.</li>
+        <li>Required fields to ensure users enter the necessary information.</li>
+        <li>Submit button to submit the registration form.</li>
+        <li>Reset button to clear the entered information.</li>
+        <li>Background image with a cover property.</li>
+        <li>Side image displayed alongside the registration form.</li>
+        <li>Transparent form container with rounded corners and box shadow.</li>
+        <li>Hover effects on navigation links and buttons.</li>
+    </ul>
+
+    <h2>What I Learned</h2>
+
+    <ul>
+        <li>How to create the basic structure of an HTML document.</li>
+        <li>How to design registration forms using HTML input elements.</li>
+        <li>How to use different input types such as text, email and password.</li>
+        <li>How to apply required and pattern attributes for form validation.</li>
+        <li>How to create navigation bars using HTML and CSS.</li>
+        <li>How to use CSS Flexbox for arranging elements side by side.</li>
+        <li>How to add background images and adjust their positions.</li>
+        <li>How to style buttons, borders, spacing and hover effects using CSS.</li>
+        <li>How to create transparent backgrounds using RGBA colors.</li>
+    </ul>
+
+</div>
+
+</body>
+</html>

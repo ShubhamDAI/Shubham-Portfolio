@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Project</title>
+<link rel="stylesheet" href="vba.css">
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="logo">Data Analytics | Project-4</div>
+
+    <div>
+        <a href="projects.html">Home</a>
+        <a href="#project">Detail</a>
+    </div>
+</div>
+
+<div class="github-section">
+    <a href="https://github.com/ShubhamDAI/VBA---Project.git"
+       target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn-icons-png.flaticon.com/256/25/25231.png"
+             alt="GitHub">
+        See, Edit, Download Code on GitHub
+    </a>
+</div>
+
+<div class="project" id="project">
+
+    <div class="image">
+        <a href="images/vba photo.png" target="_blank">
+            <img src="images/vba photo.png" alt="VBA Image 1">
+        </a>
+
+        <a href="images/vba photo 2.png" target="_blank">
+            <img src="images/vba photo 2.png" alt="VBA Image 2">
+        </a>
+    </div>
+
+    <div class="code">
+
+        <div class="code-title">VBA Code</div>
+
+        <h3>SUBMIT</h3>
+        <pre><code>Private Sub CommandButton1_Click()
+
+Dim lr As Long
+lr = Range("A1048576").End(xlUp).Row + 1
+
+Cells(lr, 1) = TextBox2.Value
+Cells(lr, 2) = TextBox3.Value
+Cells(lr, 3) = ComboBox1.Value
+Cells(lr, 4) = ComboBox2.Value
+Cells(lr, 5) = TextBox4.Value
+
+TextBox2.Value = ""
+TextBox3.Value = ""
+ComboBox1.Value = ""
+ComboBox2.Value = ""
+TextBox4.Value = ""
+
+Call refresh_data
+
+End Sub</code></pre>
+
+        <h3>RESET</h3>
+        <pre><code>Private Sub CommandButton2_Click()
+
+Unload Me
+UserForm1.Show
+
+End Sub</code></pre>
+
+        <h3>CANCEL</h3>
+        <pre><code>Private Sub CommandButton4_Click()
+
+Unload Me
+
+End Sub</code></pre>
+
+        <h3>FORM ACTIVATE / DROPDOWN</h3>
+        <pre><code>Private Sub UserForm_Activate()
+
+ComboBox1.List = Array("Manager", "Accountant", "Assistant", "Worker")
+ComboBox2.List = Array("Admin", "HR", "IT", "Finance")
+
+Range("a1") = "Emp ID"
+Range("b1") = "Emp Name"
+Range("c1") = "Emp Designation"
+Range("d1") = "Emp Department"
+Range("e1") = "Salary"
+
+Call refresh_data
+
+End Sub</code></pre>
+
+        <h3>FETCHING DATA ON DOUBLE CLICK</h3>
+        <pre><code>Private Sub ListBox2_DblClick(ByVal Cancel As MSForms.ReturnBoolean)
+
+TextBox5.Value = ListBox2.Column(0)
+TextBox2.Value = ListBox2.Column(0)
+TextBox3.Value = ListBox2.Column(1)
+ComboBox1.Value = ListBox2.Column(2)
+ComboBox2.Value = ListBox2.Column(3)
+TextBox4.Value = ListBox2.Column(4)
+
+End Sub</code></pre>
+
+        <h3>UPDATE</h3>
+        <pre><code>Private Sub CommandButton3_Click()
+
+Dim lr As Long
+lr = Range("A1048576").End(xlUp).Row
+
+Dim y As Long
+
+For y = 2 To lr
+    If TextBox5.Text = Cells(y, 1) Then
+        Cells(y, 1) = TextBox2.Value
+        Cells(y, 2) = TextBox3.Value
+        Cells(y, 3) = ComboBox1.Value
+        Cells(y, 4) = ComboBox2.Value
+        Cells(y, 5) = TextBox4.Value
+    End If
+Next y
+
+Call refresh_data
+
+End Sub</code></pre>
+
+        <h3>FETCHING DATA INTO LISTBOX</h3>
+        <pre><code>Sub refresh_data()
+
+Dim lr As Long
+lr = Range("A1048576").End(xlUp).Row
+
+If lr = 1 Then lr = 2
+
+ListBox2.ColumnCount = 5
+ListBox2.ColumnHeads = True
+ListBox2.RowSource = "A2:E" &amp; lr
+
+End Sub</code></pre>
+
+        <h3>SEARCH</h3>
+        <pre><code>Private Sub CommandButton5_Click()
+
+Dim lr As Long
+lr = Range("A1048576").End(xlUp).Row
+
+Dim y As Long
+
+For y = 2 To lr
+    If TextBox5.Text = Cells(y, 1) Then
+        TextBox2.Value = Cells(y, 1)
+        TextBox3.Value = Cells(y, 2)
+        ComboBox1.Value = Cells(y, 3)
+        ComboBox2.Value = Cells(y, 4)
+        TextBox4.Value = Cells(y, 5)
+    End If
+Next y
+
+End Sub</code></pre>
+
+        <h3>DELETE</h3>
+        <pre><code>Private Sub CommandButton6_Click()
+
+Dim lr As Long
+lr = Range("A1048576").End(xlUp).Row
+
+Dim y As Long
+
+For y = 2 To lr
+    If TextBox5.Text = Cells(y, 1) Then
+        Rows(y).Delete
+    End If
+Next y
+
+Call refresh_data
+
+End Sub</code></pre>
+
+    </div>
+
+</div>
+
+<div class="details">
+
+    <h2>About the Project</h2>
+
+    <p>
+        This is an Employee Management System developed using
+        Microsoft Excel and VBA. It allows users to manage employee
+        records through a UserForm. Employee ID, name, designation,
+        department and salary are stored in an Excel worksheet.
+        The system provides options to add, search, update and delete
+        employee records easily.
+    </p>
+
+    <h2>Tools Used</h2>
+
+    <div class="tools">
+        <span>Microsoft Excel</span>
+        <span>VBA (Visual Basic for Applications)</span>
+        <span>Excel UserForms</span>
+        <span>TextBox</span>
+        <span>ComboBox</span>
+        <span>ListBox</span>
+        <span>Command Buttons</span>
+    </div>
+
+    <h2>Features</h2>
+
+    <ul>
+        <li>Add new employee records to an Excel worksheet.</li>
+        <li>Store employee ID, name, designation, department and salary.</li>
+        <li>Search employee records using Employee ID.</li>
+        <li>Update existing employee information.</li>
+        <li>Delete employee records from the worksheet.</li>
+        <li>Display employee records in a ListBox.</li>
+        <li>Select designation and department using dropdown lists.</li>
+        <li>Load employee details into the form by double-clicking a record.</li>
+        <li>Reset or close the UserForm.</li>
+        <li>Refresh the ListBox after adding, updating or deleting records.</li>
+    </ul>
+
+    <h2>What I Learned</h2>
+
+    <ul>
+        <li>How to create and manage Excel UserForms using VBA.</li>
+        <li>How to work with TextBox, ComboBox and ListBox controls.</li>
+        <li>How to add, search, update and delete records in Excel.</li>
+        <li>How to use variables, loops and If statements in VBA.</li>
+        <li>How to find the last used row in a worksheet.</li>
+        <li>How to transfer data between a UserForm and an Excel worksheet.</li>
+        <li>How to refresh ListBox data after performing operations.</li>
+        <li>How to automate employee record management using VBA.</li>
+    </ul>
+
+</div>
+
+</body>
+</html>

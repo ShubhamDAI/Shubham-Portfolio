@@ -1,0 +1,189 @@
+<html>
+<head>
+<title>My Project</title>
+<link rel="stylesheet" href="PARALLAX EFFECT.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">Software Engineering | Project-2</div>
+
+    <div>
+        <a href="projects.html">Home</a>
+        <a href="#project">Detail</a>
+    </div>
+</div>
+
+<!-- Live at Web and GitHub Links -->
+<div class="github-section">
+
+    <!-- Live at Web - Left -->
+    <a href="https://shubhamdai.github.io/PARALLAX-EFFECT---Project/"
+       target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png"
+             alt="Live">
+        Live at Web
+    </a>
+
+    <!-- GitHub - Right -->
+    <a href="https://github.com/ShubhamDAI/PARALLAX-EFFECT---Project.git"
+       target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/256/25/25231.png"
+             alt="GitHub">
+        See, Edit, Download Code on GitHub
+    </a>
+
+</div>
+
+<!-- Project Video and Code -->
+<div class="project" id="project">
+
+    <div class="image">
+
+        <a href="videos/PARALLAX EFFECT.mp4" target="_blank">
+            <video controls preload="metadata">
+                <source src="videos/PARALLAX EFFECT.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+        </a>
+
+    </div>
+
+    <div class="code">
+
+        <div class="code-title">HTML and CSS Code</div>
+
+<pre><code>&lt;HTML&gt;
+&lt;HEAD&gt;
+&lt;TITLE&gt;PARALLAX EFFECT&lt;/TITLE&gt;
+&lt;STYLE&gt;
+    * {
+        margin: 0px;
+    }
+
+    div {
+        border: 2px solid black;
+        line-height: 100vh;
+        text-align: center;
+        height: 100vh;
+        color: white;
+        font-size: 100px;
+        font-weight: 900px;
+        font-family: lucida handwriting;
+        background-attachment: fixed;
+    }
+
+    #one {
+        background: linear-gradient(red,blue);
+        background-position: center;
+        background-size: cover;
+        font-weight: 100px;
+    }
+
+    #two {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3Gsc_Jk0kmPmEAcstiMggTNhI-Um3GiLOhoop2z0aLAaLYBLC4gGRCAWW&s=10");
+        background-position: center;
+        background-size: cover;
+        font-weight: 100px;
+    }
+
+    #three {
+        background-image: url("https://images.pexels.com/photos/1043458/pexels-photo-1043458.jpeg?cs=srgb&dl=pexels-jan-krnc-268225-1043458.jpg&fm=jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-weight: 100px;
+    }
+
+    #four {
+        background-image: url("https://media.istockphoto.com/id/1317568311/photo/monsoon-dramatic-weather-landscape.jpg?s=612x612&w=0&k=20&c=6igQioEW7ZYMLNl8vP0lITLAaskIX2_CHTCZ2XNq-wU=");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    #five {
+        background-image: url("https://static.toiimg.com/thumb/msid-113800988,width-748,height-499,resizemode-4,imgsize-368128/.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    #six {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoyphhQMzXGm7CfqpKslaqaqCxD8q0oDhbWWuZS78cbV5C6BAZM2hxbLHa&s=10");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    p {
+        backdrop-filter: blur(2px);
+    }
+&lt;/STYLE&gt;
+&lt;/HEAD&gt;
+
+&lt;BODY&gt;
+
+&lt;div id="one"&gt;&lt;p&gt;Types Of Seasons&lt;/p&gt;&lt;/div&gt;
+&lt;div id="two"&gt;&lt;p&gt;Summer&lt;/p&gt;&lt;/div&gt;
+&lt;div id="three"&gt; Spring&lt;/p&gt;&lt;/div&gt;
+&lt;div id="four"&gt;&lt;p&gt; Monsoon&lt;/p&gt;&lt;/div&gt;
+&lt;div id="five"&gt;&lt;p&gt;Autumn&lt;/p&gt;&lt;/div&gt;
+&lt;div id="six"&gt; &lt;p&gt;Winter&lt;/p&gt;&lt;/div&gt;
+
+&lt;/BODY&gt;
+&lt;/HTML&gt;</code></pre>
+
+    </div>
+
+</div>
+
+<!-- Project Details -->
+<div class="details">
+
+    <h2>About the Project</h2>
+
+    <p>
+        This project demonstrates the Parallax Scrolling Effect using HTML and CSS. It consists of six full-screen sections representing different seasons, including Summer, Spring, Monsoon, Autumn and Winter. Each section uses different background images, and the fixed background attachment creates a parallax effect while scrolling the webpage.
+    </p>
+
+    <h2>Tools Used</h2>
+
+    <div class="tools">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>CSS Background Properties</span>
+        <span>CSS Linear Gradient</span>
+        <span>CSS Backdrop Filter</span>
+    </div>
+
+    <h2>Features</h2>
+
+    <ul>
+        <li>Six full-screen sections covering different seasons.</li>
+        <li>Different background images for each season.</li>
+        <li>Fixed background images using background-attachment: fixed.</li>
+        <li>Gradient background in the first section.</li>
+        <li>Center-aligned text with large font size.</li>
+        <li>Background images adjusted using background-position and background-size.</li>
+        <li>Blur effect behind text using backdrop-filter.</li>
+    </ul>
+
+    <h2>What I Learned</h2>
+
+    <ul>
+        <li>How to create webpage sections using HTML div elements.</li>
+        <li>How to apply background images using CSS.</li>
+        <li>How the background-attachment: fixed property creates a parallax effect.</li>
+        <li>How to use linear-gradient() for background styling.</li>
+        <li>How to control background images using background-position, background-size and background-repeat.</li>
+        <li>How to style text using CSS font properties.</li>
+        <li>How to apply blur effects using backdrop-filter.</li>
+    </ul>
+
+</div>
+
+</body>
+</html>
